@@ -14,9 +14,9 @@ app = FastAPI()
 
 # Create Endpoints
 @app.get("/")
-# Create the function of the endpoint
-def Hi():
-    return {'message': 'Hello Pyhton'}
+def read_index():
+    # 2. Return your HTML file instead of a JSON message
+    return FileResponse("index.html")
 
 # --- MANDATORY FOR FRONTEND CONNECTION ---
 app.add_middleware(
