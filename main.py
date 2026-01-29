@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse # <--- 1. Add this import
 
 class BMIOutput(BaseModel):
     bmi: float
